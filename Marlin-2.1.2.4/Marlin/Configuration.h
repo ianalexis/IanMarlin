@@ -687,9 +687,9 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_Kp  21.73
+    #define DEFAULT_Kp  21.7 //Ian
     #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kd  76.6 //Ian
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -2257,7 +2257,7 @@
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "PET-G"
+#define PREHEAT_2_LABEL       "PETG"
 #define PREHEAT_2_TEMP_HOTEND 230
 #define PREHEAT_2_TEMP_BED     70
 #define PREHEAT_2_TEMP_CHAMBER 35
@@ -2268,6 +2268,30 @@
 #define PREHEAT_3_TEMP_BED     60
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_4_LABEL       "Secar ABS, PETG, ASA y HIPS"
+#define PREHEAT_4_TEMP_HOTEND  0
+#define PREHEAT_4_TEMP_BED     70
+#define PREHEAT_4_TEMP_CHAMBER 35
+#define PREHEAT_4_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_5_LABEL       "Secar PLA,TPU/TPE y PP"
+#define PREHEAT_5_TEMP_HOTEND  0
+#define PREHEAT_5_TEMP_BED     60
+#define PREHEAT_5_TEMP_CHAMBER 35
+#define PREHEAT_5_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_6_LABEL       "Secar Nylon y PC"
+#define PREHEAT_6_TEMP_HOTEND  0
+#define PREHEAT_6_TEMP_BED     80
+#define PREHEAT_6_TEMP_CHAMBER 35
+#define PREHEAT_6_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_7_LABEL       "Secar PVA"
+#define PREHEAT_7_TEMP_HOTEND  0
+#define PREHEAT_7_TEMP_BED     45
+#define PREHEAT_7_TEMP_CHAMBER 35
+#define PREHEAT_7_FAN_SPEED   0 // Value from 0 to 255
 
 // @section motion
 

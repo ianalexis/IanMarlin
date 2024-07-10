@@ -1093,7 +1093,7 @@
   #endif
   #if ENABLED(INPUT_SHAPING_Y)
     #define SHAPING_FREQ_Y  32          //Ian // (Hz) The default dominant resonant frequency on the Y axis.
-    #define SHAPING_ZETA_Y  0.30f       //Ian // Damping ratio of the Y axis (range: 0.0 = no damping to 1.0 = critical damping).
+    #define SHAPING_ZETA_Y  0.15f       //Ian // Damping ratio of the Y axis (range: 0.0 = no damping to 1.0 = critical damping).
   #endif
   //#define SHAPING_MIN_FREQ  20        // By default the minimum of the shaping frequencies. Override to affect SRAM usage.
   //#define SHAPING_MAX_STEPRATE 10000  // By default the maximum total step rate of the shaped axes. Override to affect SRAM usage.
@@ -2117,7 +2117,7 @@
   #if ENABLED(DISTINCT_E_FACTORS)
     #define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder
   #else
-    #define ADVANCE_K 0.38        // (mm) Compression length applying to all extruders//Ian
+    #define ADVANCE_K 0.37        // (mm) Compression length applying to all extruders//ABS Plastar Boquilla 0.5 = 0.37 //Ian
   #endif
   //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with M900 L.
   //#define LA_DEBUG              // Print debug information to serial during operation. Disable for production use.
