@@ -1,6 +1,7 @@
-# Proyecto de Configuración de Marlin para Ender 3 Custom
+# Configuración de Marlin para Ender 3 Custom
 
 Este proyecto contiene las modificaciones necesarias en la configuración del firmware Marlin para mi impresora 3D Ender 3 personalizada.
+Su objetivo principal es mantener la trazabilidad de los cambios y sus mejoras.
 
 ## Archivos Modificados
 
