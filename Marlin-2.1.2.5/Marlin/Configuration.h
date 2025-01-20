@@ -140,7 +140,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ender-3 4.2.2"
+#define CUSTOM_MACHINE_NAME "Ender-3-Ian 4.2.2"//Ian
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -553,7 +553,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 847 //Ian
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -636,15 +636,15 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
-#define HEATER_1_MAXTEMP 275
-#define HEATER_2_MAXTEMP 275
-#define HEATER_3_MAXTEMP 275
-#define HEATER_4_MAXTEMP 275
-#define HEATER_5_MAXTEMP 275
-#define HEATER_6_MAXTEMP 275
-#define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      125
+#define HEATER_0_MAXTEMP 305//Ian
+#define HEATER_1_MAXTEMP 305//Ian
+#define HEATER_2_MAXTEMP 305//Ian
+#define HEATER_3_MAXTEMP 305//Ian
+#define HEATER_4_MAXTEMP 305//Ian
+#define HEATER_5_MAXTEMP 305//Ian
+#define HEATER_6_MAXTEMP 305//Ian
+#define HEATER_7_MAXTEMP 305//Ian
+#define BED_MAXTEMP      135//Ian
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -689,9 +689,9 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_Kp  21.73
+    #define DEFAULT_Kp  21.7 //Ian
     #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kd  76.6 //Ian
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -770,7 +770,7 @@
  *
  * With this option disabled, bang-bang will be used. BED_LIMIT_SWITCHING enables hysteresis.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED//Ian//
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
@@ -778,9 +778,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 150.30//Ian verificar pidautotune cama //Rodrigo 90.5 // Original 10
+  #define DEFAULT_bedKi 28.47//Ian verificar pidautotune cama //Rodrigo 16.51 // Original .023
+  #define DEFAULT_bedKd 528.7//Ian verificar pidautotune cama //Rodrigo 330.4 // Original 305.4
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from pidautotune
@@ -1205,7 +1205,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139 } //Ian EXTRUSOR SIMPLE 96, DOBLE 139.15
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1295,7 +1295,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION//Ian
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -2073,13 +2073,13 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LCD_BED_TRAMMING
+#define LCD_BED_TRAMMING //Ian
 
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at tramming points
   #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z raise between tramming points
-  //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
+  #define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner//Ian
   //#define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
     #define BED_TRAMMING_PROBE_TOLERANCE 0.1  // (mm)
@@ -2199,7 +2199,7 @@
   #endif
 
   // Enable this option for M852 to set skew at runtime
-  //#define SKEW_CORRECTION_GCODE
+  #define SKEW_CORRECTION_GCODE
 #endif
 
 //=============================================================================
@@ -2254,18 +2254,50 @@
 
 //
 // Preheat Constants - Up to 10 are supported without changes
-//
-#define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 220
-#define PREHEAT_1_TEMP_BED     45
+//Ian
+#define PREHEAT_1_LABEL       "ABS"
+#define PREHEAT_1_TEMP_HOTEND 240
+#define PREHEAT_1_TEMP_BED     95
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED     60
+#define PREHEAT_2_LABEL       "PETG"
+#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_BED     70
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_3_LABEL       "PLA"
+#define PREHEAT_3_TEMP_HOTEND 200
+#define PREHEAT_3_TEMP_BED     60
+#define PREHEAT_3_TEMP_CHAMBER 35
+#define PREHEAT_3_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_4_LABEL       "Secar ABS, PETG, ASA y HIPS"
+#define PREHEAT_4_TEMP_HOTEND  0
+#define PREHEAT_4_TEMP_BED     70
+#define PREHEAT_4_TEMP_CHAMBER 35
+#define PREHEAT_4_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_5_LABEL       "Secar PLA,TPU/TPE y PP"
+#define PREHEAT_5_TEMP_HOTEND  0
+#define PREHEAT_5_TEMP_BED     60
+#define PREHEAT_5_TEMP_CHAMBER 35
+#define PREHEAT_5_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_6_LABEL       "Secar Nylon y PC"
+#define PREHEAT_6_TEMP_HOTEND  0
+#define PREHEAT_6_TEMP_BED     80
+#define PREHEAT_6_TEMP_CHAMBER 35
+#define PREHEAT_6_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_7_LABEL       "Secar PVA"
+#define PREHEAT_7_TEMP_HOTEND  0
+#define PREHEAT_7_TEMP_BED     45
+#define PREHEAT_7_TEMP_CHAMBER 35
+#define PREHEAT_7_FAN_SPEED   0 // Value from 0 to 255
+
+// @section motion
 
 /**
  * @section nozzle park
@@ -2583,7 +2615,7 @@
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
-//#define INDIVIDUAL_AXIS_HOMING_MENU
+#define INDIVIDUAL_AXIS_HOMING_MENU//Ian
 //#define INDIVIDUAL_AXIS_HOMING_SUBMENU
 
 //
