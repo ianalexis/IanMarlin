@@ -644,7 +644,7 @@
 #define HEATER_5_MAXTEMP 305//Ian
 #define HEATER_6_MAXTEMP 305//Ian
 #define HEATER_7_MAXTEMP 305//Ian
-#define BED_MAXTEMP      135//Ian
+#define BED_MAXTEMP      105//Ian
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -867,7 +867,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 200
+#define EXTRUDE_MAXLENGTH 395//Ian
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -2256,46 +2256,34 @@
 // Preheat Constants - Up to 10 are supported without changes
 //Ian
 #define PREHEAT_1_LABEL       "ABS"
-#define PREHEAT_1_TEMP_HOTEND 240
+#define PREHEAT_1_TEMP_HOTEND 90
 #define PREHEAT_1_TEMP_BED     95
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
-#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_HOTEND 70
 #define PREHEAT_2_TEMP_BED     70
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED   0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PLA"
-#define PREHEAT_3_TEMP_HOTEND 200
+#define PREHEAT_3_TEMP_HOTEND 50
 #define PREHEAT_3_TEMP_BED     60
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED   0 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL       "Secar ABS, PETG, ASA y HIPS"
+#define PREHEAT_4_LABEL       "Secar 100"
 #define PREHEAT_4_TEMP_HOTEND  0
-#define PREHEAT_4_TEMP_BED     70
+#define PREHEAT_4_TEMP_BED     100
 #define PREHEAT_4_TEMP_CHAMBER 35
 #define PREHEAT_4_FAN_SPEED   0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL       "Secar PLA,TPU/TPE y PP"
+#define PREHEAT_5_LABEL       "Secar 60"
 #define PREHEAT_5_TEMP_HOTEND  0
 #define PREHEAT_5_TEMP_BED     60
 #define PREHEAT_5_TEMP_CHAMBER 35
 #define PREHEAT_5_FAN_SPEED   0 // Value from 0 to 255
-
-#define PREHEAT_6_LABEL       "Secar Nylon y PC"
-#define PREHEAT_6_TEMP_HOTEND  0
-#define PREHEAT_6_TEMP_BED     80
-#define PREHEAT_6_TEMP_CHAMBER 35
-#define PREHEAT_6_FAN_SPEED   0 // Value from 0 to 255
-
-#define PREHEAT_7_LABEL       "Secar PVA"
-#define PREHEAT_7_TEMP_HOTEND  0
-#define PREHEAT_7_TEMP_BED     45
-#define PREHEAT_7_TEMP_CHAMBER 35
-#define PREHEAT_7_FAN_SPEED   0 // Value from 0 to 255
 
 // @section motion
 
