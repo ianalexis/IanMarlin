@@ -867,7 +867,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 400//Ian TODO: Verificar
+#define EXTRUDE_MAXLENGTH 395//Ian
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
