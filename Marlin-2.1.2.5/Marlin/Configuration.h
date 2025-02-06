@@ -644,8 +644,8 @@
 #define HEATER_5_MAXTEMP 305//Ian
 #define HEATER_6_MAXTEMP 305//Ian
 #define HEATER_7_MAXTEMP 305//Ian
-#define BED_MAXTEMP      105//Ian
-#define CHAMBER_MAXTEMP  60
+#define BED_MAXTEMP      115//Ian
+#define CHAMBER_MAXTEMP  75//Ian
 
 /**
  * Thermal Overshoot
