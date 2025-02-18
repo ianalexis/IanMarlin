@@ -2199,7 +2199,7 @@
   #endif
 
   // Enable this option for M852 to set skew at runtime
-  #define SKEW_CORRECTION_GCODE
+  #define SKEW_CORRECTION_GCODE//Ian 4.2.2 DESCOMENTADO SKS COMENTADO. REVISAR
 #endif
 
 //=============================================================================
@@ -2612,7 +2612,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-#define SPEAKER
+#define SPEAKER//Ian 4.2.2 DESCOMENTADO SKS COMENTADO. REVISAR
 
 //
 // The duration and frequency for the UI feedback sound.
