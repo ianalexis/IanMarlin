@@ -81,10 +81,10 @@
 #define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-//#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN//Ian
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-//#define CUSTOM_STATUS_SCREEN_IMAGE
+//#define CUSTOM_STATUS_SCREEN_IMAGE//Ian
 
 // @section machine
 
@@ -644,7 +644,7 @@
 #define HEATER_5_MAXTEMP 305//Ian
 #define HEATER_6_MAXTEMP 305//Ian
 #define HEATER_7_MAXTEMP 305//Ian
-#define BED_MAXTEMP      115//Ian
+#define BED_MAXTEMP      125//Ian
 #define CHAMBER_MAXTEMP  75//Ian
 
 /**
@@ -2191,7 +2191,7 @@
   #endif
 
   // Enable this option for M852 to set skew at runtime
-  #define SKEW_CORRECTION_GCODE//Ian 4.2.2 DESCOMENTADO SKS COMENTADO. REVISAR
+  #define SKEW_CORRECTION_GCODE//Ian
 #endif
 
 //=============================================================================
