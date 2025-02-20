@@ -78,7 +78,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN//Ian
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define SHOW_CUSTOM_BOOTSCREEN//Ian
@@ -2602,7 +2602,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-#define SPEAKER//Ian 4.2.2 DESCOMENTADO SKS COMENTADO. REVISAR
+#define SPEAKER//Ian
 
 //
 // The duration and frequency for the UI feedback sound.
